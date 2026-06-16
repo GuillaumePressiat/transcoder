@@ -1,4 +1,6 @@
-# Transcoder app bureau Tauri + SvelteKit + Rust <img width="200" align = "right" alt="logo" src="https://github.com/GuillaumePressiat/transcoder/blob/main/src-tauri/icons/ios/AppIcon-512@2x.png?raw=true" />
+# Transcoder <img width="200" align = "right" alt="logo" src="https://github.com/GuillaumePressiat/transcoder/blob/main/src-tauri/icons/ios/AppIcon-512@2x.png?raw=true" />
+
+**app bureau Tauri + SvelteKit + Rust**
 
 Port de la Shiny app [stringfix/transcoder](https://github.com/GuillaumePressiat/stringfix/tree/master/inst/transcoder/transcoder) en application bureau native.
 
