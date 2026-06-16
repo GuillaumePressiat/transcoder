@@ -2,6 +2,9 @@
 
 Port de la Shiny app [stringfix/transcoder](https://github.com/GuillaumePressiat/stringfix/tree/master/inst/transcoder/transcoder) en application bureau native.
 
+
+![Aperçu](assets/screenshot.png)
+
 ## Stack
 
 | Couche    | Techno                      |
