@@ -14,14 +14,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          #- platform: 'macos-latest' # Apple Silicon (M1+)
-          #  args: '--target aarch64-apple-darwin'
-          #- platform: 'macos-latest' # Intel
-          #  args: '--target x86_64-apple-darwin'
-          - platform: 'ubuntu-22.04' # glibc plus ancienne = AppImage/deb compatibles plus largement
-            args: ''
-          - platform: 'windows-latest'
-            args: ''
+          - platform: 'macos-latest' # Apple Silicon (M1+)
+            args: '--target aarch64-apple-darwin'
+          - platform: 'macos-latest' # Intel
+            args: '--target x86_64-apple-darwin'
+          #- platform: 'ubuntu-22.04' # glibc plus ancienne = AppImage/deb compatibles plus largement
+          #  args: ''
+          #- platform: 'windows-latest'
+          #  args: ''
 
     runs-on: ${{ matrix.platform }}
     steps:
