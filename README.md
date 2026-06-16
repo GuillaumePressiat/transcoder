@@ -1,8 +1,16 @@
 # Transcoder <img width="200" align = "right" alt="logo" src="https://github.com/GuillaumePressiat/transcoder/blob/main/src-tauri/icons/ios/AppIcon-512@2x.png?raw=true" />
 
+**Convertir rapidement des listes de codes/items en ligne, en colonne, pour le `SQL%` et `pipe|` de R**
+
+
+- formater des listes pour le code / requêtage de données (clause where, filter, regexp)
+- conversions entre format lisible (méthodo) et format pour le code
+(avec quote, avec pipe, pour le SQL)
+- transposer des listes de codes/items en colonnes et vice-versa
+
 **app bureau Tauri + SvelteKit + Rust**
 
-Port de la Shiny app [stringfix/transcoder](https://github.com/GuillaumePressiat/stringfix/tree/master/inst/transcoder/transcoder) en application bureau native.
+Port de la Shiny app [stringfix/transcoder](https://guillaumepressiat.shinyapps.io/transcodeur/) cf code [ici](https://github.com/GuillaumePressiat/stringfix/tree/master/inst/transcoder/transcoder) en application bureau native.
 
 
 ![Aperçu](assets/screenshot.png)
