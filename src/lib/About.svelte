@@ -56,8 +56,8 @@
     z-index: 200;
   }
   .modal {
-    background: #161820;
-    border: 1px solid #252830;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 32px 36px;
     width: 400px;
@@ -71,14 +71,13 @@
     top: 14px; right: 16px;
     background: none;
     border: none;
-    color: #5a5f75;
+    color: var(--text-muted);
     font-size: 14px;
     cursor: pointer;
     padding: 4px 6px;
     border-radius: 4px;
   }
-  .close:hover { background: #1e2130; color: #9098b8; }
-
+  .close:hover { background: var(--bg-hover); color: var(--accent); }
   .logo-wrap {
     display: flex;
     align-items: center;
@@ -86,19 +85,19 @@
   }
   .logo {
     font-size: 28px;
-    color: #7c8ef7;
+    color: var(--accent);
     line-height: 1;
   }
   h1 {
     font-size: 20px;
     font-weight: 600;
-    color: #f0f2f8;
+    color: var(--text-strong);
     letter-spacing: -0.01em;
   }
   .version {
     font-size: 11px;
-    background: #7c8ef720;
-    color: #7c8ef7;
+    background: var(--accent-soft);
+    color: var(--accent);
     border: 1px solid #7c8ef740;
     border-radius: 4px;
     padding: 2px 7px;
@@ -106,12 +105,12 @@
   }
   .tagline {
     font-size: 12.5px;
-    color: #6b7294;
+    color: var(--text-subtle);
     line-height: 1.6;
   }
   .divider {
     height: 1px;
-    background: #1e2130;
+    background: var(--border-soft);
   }
   .meta {
     display: flex;
@@ -125,7 +124,7 @@
   }
   .label {
     font-size: 11px;
-    color: #5a5f75;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: .05em;
     font-weight: 600;
@@ -134,10 +133,10 @@
   }
   .value {
     font-size: 13px;
-    color: #c0c4d8;
+    color: var(--text-secondary);
   }
   .link {
-    color: #7c8ef7;
+    color: var(--accent);
     text-decoration: none;
     font-size: 12px;
     font-family: monospace;
@@ -150,11 +149,11 @@
   }
   .chip {
     font-size: 11px;
-    background: #1a1d28;
-    border: 1px solid #252830;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
     border-radius: 5px;
     padding: 3px 10px;
-    color: #6b7294;
+    color: var(--text-subtle);
     font-family: monospace;
   }
 </style>
