@@ -9,7 +9,7 @@
     <div class="logo-wrap">
       <span class="logo">⌗</span>
       <h1>Transcoder</h1>
-      <span class="version">v0.1.0</span>
+      <span class="version">v0.2.0</span>
     </div>
 
     <p class="tagline">Transposition et gestion de listes de codes médicaux<br/>CCAM · CIM-10 · FINESS · ETCetera</p>
