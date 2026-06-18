@@ -11,6 +11,11 @@ Toutes les modifications notables de ce projet sont documentées dans ce fichier
   Le choix est persisté dans `localStorage` et restauré au démarrage.
 - Raccourci `Ctrl/Cmd + L` pour focus + sélection complète du champ de saisie
   actif (input ligne ou textarea colonne/conversion), quel que soit l'onglet ouvert.
+- Persistance des préférences utilisateur dans `localStorage` : onglet actif,
+  type de guillemets, séparateur, format de sortie (onglets 1 et 2), 
+  (via `localStorage` isolé à l'app Tauri).
+- Séparation des indicateurs de copie : "Copié" dans l'onglet principal
+  n'est plus déclenché lors d'une copie depuis l'historique.
 
 ### Modifié
 

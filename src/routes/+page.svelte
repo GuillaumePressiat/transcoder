@@ -17,25 +17,39 @@
     try { localStorage.setItem('transcoder-theme', theme); } catch {}
   });
 
+    // Initialisation (remplace les $state existants)
+  let quote = $state(localStorage.getItem('tc-quote') ?? 'single');
+  let separator = $state(localStorage.getItem('tc-sep') ?? 'comma_space');
+  let activeTab = $state(localStorage.getItem('tc-tab') ?? 'line');
+  let lineOutputType = $state(localStorage.getItem('tc-line-type') ?? 'list');
+  let colOutputType = $state(localStorage.getItem('tc-col-type') ?? 'list');
+
+  // Persistance
+  $effect(() => { localStorage.setItem('tc-quote', quote); });
+  $effect(() => { localStorage.setItem('tc-sep', separator); });
+  $effect(() => { localStorage.setItem('tc-tab', activeTab); });
+  $effect(() => { localStorage.setItem('tc-line-type', lineOutputType); });
+  $effect(() => { localStorage.setItem('tc-col-type', colOutputType); });
+
   function toggleTheme() {
     theme = theme === 'dark' ? 'light' : 'dark';
   }
 
   // ── Global options ──────────────────────────────────────────────────────
-  let quote = $state('single');
-  let separator = $state('comma_space');
+  // let quote = $state('single');
+  // let separator = $state('comma_space');
 
   // ── Tab state ───────────────────────────────────────────────────────────
-  let activeTab = $state('line');
+  // let activeTab = $state('line');
 
   // Tab 1 – line
   let lineInput = $state('F072, G430, G431, G432, G433, G438, G439, G440, G441, G442, G443, G444, G448, G932, G971, R51');
-  let lineOutputType = $state('list');
+  // let lineOutputType = $state('list');
   let lineResult = $state(null);
 
   // Tab 2 – column
   let colInput = $state('BGBA001\nBGDA001\nBGDA002\nBGDA003\nBGDA004\nBGDA005\nBGDA006\nBGDA007\nBGDA008\nBGFA002\nBGFA003\nBGFA004');
-  let colOutputType = $state('list');
+  // let colOutputType = $state('list');
   let colResult = $state(null);
 
   // Tab 3 – convert
@@ -77,7 +91,11 @@
 
   async function copyHistoryEntry(entry) {
     copiedId = entry.id;
-    await doCopy(entry.output);
+    try {
+      await copyToClipboard(entry.output);
+    } catch {
+      await navigator.clipboard.writeText(entry.output);
+    }
     await new Promise(r => setTimeout(r, 1400));
     copiedId = null;
   }
@@ -156,7 +174,7 @@
   }
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window onkeydown={handleKeydown} />
 
 <div class="app">
 
