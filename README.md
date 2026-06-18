@@ -13,7 +13,9 @@
 Port de la Shiny app [stringfix/transcoder](https://guillaumepressiat.shinyapps.io/transcodeur/) cf code [ici](https://github.com/GuillaumePressiat/stringfix/tree/master/inst/transcoder/transcoder) en application bureau native.
 
 
-![Aperçu](assets/screenshot.png)
+![Aperçu thème sombre](assets/screenshot.png)
+
+![Aperçu thème clair](assets/screenshot_light.png)
 
 ## Stack
 
